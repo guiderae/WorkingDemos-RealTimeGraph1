@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+
+
+</head>
+<body>
+    <div class="mainDiv">
+        <h1>Real Time Graph Demo</h1>
+
+        <div id="tab4" class="tabcontent">
+            <h3>Model Prediction</h3>
+            <div id="tab4PrepContainer" class="predictContainer">
+                <fieldset class="spanTwoCols">
+                    <legend>Select a Data Source For Prediction</legend>
+                    <select id="predictCSV" >
+                        {% for onefile in filenames %}
+                            <option value="{{ onefile }}">{{ onefile }}</option>
+                        {% endfor %}
+                    </select>
+                </fieldset>
+
+                <fieldset class="spanTwoCols">
+                    <legend> Prediction Action</legend>
+                    <div id="predBtnContainer" class="spanTwoCols">
+                        <button id="startPredictBtn">Start Prediction Graph</button>
+                        <button id="stopPredictBtn">Stop Prediction Graph</button>
+                    </div>
+                </fieldset>
+            </div>
+            <div id="predGraph" class="predictGraphDiv"></div>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="static/messageHandler.js"></script>
+    <script src="static/plot.js"></script>
+
+
+</body>
+</html>
