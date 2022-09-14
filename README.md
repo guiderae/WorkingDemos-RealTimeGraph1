@@ -6,7 +6,7 @@ This demo shows how to create a simple Flask web application that maintains a re
 
 The server side code is written in Python 3.8 and the client browser code is written in pure HTML5 and Javascript.  The Javascript library, plotly.js is used to render the graph on the browser.
 
-The web framework used is Flask 2.0.1.
+The web framework used is Flask 2.0.1.  However, the code was designed to be independent of the web framework.  For example, if you wish to use Django instead of Flask, just rewrite wsgi.py and replace all Flask dependencies with those from Django.  Nothing else in the project would need to be changed.
 
 Make sure you have a path set to your Python interpreter.
 
