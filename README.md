@@ -2,7 +2,6 @@
 
 This demo shows how to create a simple Flask web application that maintains a real time graph from data artificially generated to simulate real time data generation.  In particular the demo shows how to "push" data from a server side data source to the browser where a graph is updated each time a new data point is made available.  
 
-<a href="https://github.com/guiderae/WorkingDemos-RealTimeGraph1/blob/master/docs/PlotRealTimeData2.md">View Documentation </a>
 
 [View Documentation](docs/PlotRealTimeData2.md)
 
