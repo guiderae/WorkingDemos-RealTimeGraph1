@@ -11,7 +11,7 @@ eliguidera45@gmail.com
 
 # Plot Real Time Data: Demo Flask Application
 
-![](../prediction2.gif)
+![](prediction2.gif)
 
 
 This document explains how to plot a real time graph of time series data. In particular, time series data
