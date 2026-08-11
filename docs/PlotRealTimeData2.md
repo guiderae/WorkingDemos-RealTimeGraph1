@@ -11,7 +11,16 @@ eliguidera45@gmail.com
 
 # Plot Real Time Data: Demo Flask Application
 
+The following gif is a capture from a [Failure Prediction](https://github.com/guiderae/CMAPSS-2-RealTime) 
+app that uses an LSTM model trained on  data from the NASA Turbofan dataset to predict engine failure.  The output
+that you see shows in real time the engine failure.
 ![](prediction2.gif)
+
+
+The gif below isolates the process where data is generated to simulate sensor data receival and shows the 
+sensor data being plotted on the browser as it is received from the data source. 
+
+![](JustSensors1.gif)
 
 
 This document explains how to plot a real time graph of time series data. In particular, time series data
