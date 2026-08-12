@@ -32,4 +32,9 @@ Notice that the response in the console shows a url of your web application:
 
 http://127.0.0.1:5001
 
-If you then enter this url into your browser, you will see the opening page of the web application.
+If you then enter this url into your browser, you will see the opening page of the web application:
+
+![](docs/RealTimeGraphScreen.png)
+
+The user interface is simple.  Just select a data source (there are 3) and click on the 
+"Start Prediction" button.  You can stop the plot with the "Stop Prediction Graph".
