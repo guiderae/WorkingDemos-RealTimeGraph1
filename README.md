@@ -1,18 +1,19 @@
 # WorkingDemos-RealTimeGraph1
 
-This demo shows how to create a simple Flask web application that maintains a real time graph from data artificially generated to simulate real time data generation.  In particular the demo shows how to "push" data from a server side data source to the browser where a graph is updated each time a new data point is made available.  
+This demo shows how to create a simple Flask web application that maintains a real time plot from data artificially generated to simulate real time data generation.  In particular the demo shows how to "push" data from a server side data source to the browser where a plot is updated each time a new data point is made available.  
 
 ## Summary
 
-The Javascript EventSource class establishes a persistent HTTP connection between the browser and a server. This provides one-way communication from the server to the browser. Once the connection is established, the server can continuously send messages containing new data points to the browser (Server-Sent Events or SSE). JavaScript running in the browser can then process those data points and use Plotly.js to update and display a graph.
+The Javascript `EventSource` class is used to establish a persistent HTTP connection between the browser and a server. This provides one-way communication from the server to the browser. Once the connection is established, the server can continuously send messages (Server-Sent Events or SSE) containing new data points to the browser.  JavaScript running in the browser can then process those data points and use Plotly.js to update the plot.
 
 The persistent HTTP connection differs from a typical HTTP request-response interaction in that, with SSE, the server keeps the HTTP response open and can continue sending messages to the browser as new data becomes available. In a typical HTTP request-response interaction, the server sends its response and the request is then completed, allowing the connection to be closed.
 
 A high level view of the design is:
 - The server receives data from a remote source
-- The data is put into Json form and is then sent to the connected browser as a message.
-- On the browser side, the message containing the data is unpacked using Javascript.
-- The Javascript Plotly.js is used to update the currently displayed graph with the new point data.  The data points are added to the graph without having to re-render the whole graph.
+- The data is put into Json form and is then sent, using the SSE mechanism, to the connected browser as a message.
+- On the browser side, the message containing the Json data is unpacked using Javascript.
+- The Javascript Plotly.js is used to update the currently displayed plot with the new point data.  The data points are simply added to the plot without having to re-render the whole plot.
+- The plot is configured so as time goes by and more data points are added, the plot will scroll the older data out of view.
   
 
 [View Documentation](docs/PlotRealTimeData2.md)
