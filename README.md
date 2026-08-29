@@ -10,10 +10,10 @@ The persistent HTTP connection differs from a typical HTTP request-response inte
 
 A high level view of the design is:
 - The server receives data from a remote source
-- The data is put into Json form and is then sent, using the SSE mechanism, to the connected browser as a message.
+- The data is put into Json form and is then sent as a message, using the SSE mechanism, to the connected browser.
 - On the browser side, the message containing the Json data is unpacked using Javascript.
-- The Javascript Plotly.js is used to update the currently displayed plot with the new point data.  The data points are simply added to the plot without having to re-render the whole plot.
-- The plot is configured so as time goes by and more data points are added, the plot will scroll the older data out of view.
+- The Javascript Plotly.js is used to update the currently displayed plot with the new point data.  The data points are simply added to the plot ***without having to re-render the whole plot***.
+- The plot is configured in such a way that as time goes by and more data points are added, the plot will scroll the older data out of view.
   
 
 [View Documentation](docs/PlotRealTimeData2.md)
